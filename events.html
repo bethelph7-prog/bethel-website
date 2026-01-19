@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Announcements | Bethel Prayer House</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="events-page">
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html"
+                    style="text-decoration: none; display: flex; align-items: center; gap: 1rem; color: #fff;">
+                    <img src="public/logo.jpg" alt="Bethel Prayer House" class="logo-img">
+                    <span class="logo-brand">Bethel Prayer House</span>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="events-header">
+            <h1 class="gradient-text">Upcoming Events & Announcements</h1>
+            <p>Stay connected with the vibrant life at Bethel!</p>
+        </section>
+
+        <div class="events-grid">
+            <!-- Left Side: Flyer & Services -->
+            <div class="flyer-column">
+                <div class="flyer-container">
+
+                    <div class="service-cards">
+                        <div class="service-card">
+                            <div class="service-icon">⛪</div>
+                            <div class="service-details">
+                                <h3>Good Friday Service</h3>
+                                <span class="service-time">11:00 AM</span>
+                                <p>A solemn service of scripture, hymns, as we remember Christ's ultimate sacrifice.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-icon">🕯️</div>
+                            <div class="service-details">
+                                <h3>Easter Sunday Service</h3>
+                                <span class="service-time">3:00 PM</span>
+                                <p>Join us for an uplifting celebration filled with music, joy, and the good news of the
+                                    resurrection.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Invitation Box -->
+            <div class="invite-column">
+                <div class="invite-card">
+                    <p class="invite-desc">
+                        Join us at Bethel Prayer House as we journey through the most sacred days of our faith—from
+                        reflection to resurrection.
+                    </p>
+
+                    <div class="invite-info">
+                        <div class="info-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Bethel Prayer House</strong><br>
+                                7S201 S River Rd, Naperville, IL 60540
+                            </div>
+                        </div>
+
+                        <p class="invite-tagline">
+                            Bring your family and friends — let's worship together, celebrate together in God's
+                            presence. <strong>All are welcome!</strong>
+                        </p>
+
+                        <div class="invite-contact">
+                            <strong>For more information:</strong>
+                            <div class="contact-numbers">
+                                📞 +1 818-610-9650 | +1 630-854-7335
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        :root {
+            --bg-dark: #000000;
+            --accent-blue: #0ea5e9;
+            --accent-purple: #a855f7;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --card-bg: #111111;
+            --gradient: linear-gradient(135deg, #0ea5e9 0%, #a855f7 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+
+        header {
+            padding: 1.5rem 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-brand {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a.active {
+            color: #fff;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .events-header {
+            margin-top: 6rem;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .events-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .events-header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            margin-bottom: 8rem;
+        }
+
+        /* Flyer Column Styling */
+
+        .flyer-container {
+            background: #080808;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .flyer-image-wrapper {
+            position: relative;
+            height: 400px;
+        }
+
+        .flyer-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .flyer-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 3rem;
+            background: linear-gradient(to top, #080808, transparent);
+        }
+
+        .flyer-tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .flyer-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .service-cards {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: #151515;
+            padding: 1.5rem;
+            border-radius: 16px;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(14, 165, 233, 0.2);
+        }
+
+        .service-icon {
+            background: #222;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .service-details h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+            color: #eee;
+        }
+
+        .service-time {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-details p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Invite Column Styling */
+        .invite-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            position: sticky;
+            top: 150px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .invite-card h2 {
+            font-size: 2.2rem;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .invite-desc {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .info-item .icon {
+            font-size: 1.5rem;
+        }
+
+        .invite-tagline {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        .invite-contact {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .invite-contact strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        .contact-numbers {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        @media (max-width: 1100px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .invite-card {
+                position: static;
+            }
+        }
+    </style>
+</body>
+
+</html>
