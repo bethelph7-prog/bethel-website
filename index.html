@@ -1847,6 +1847,110 @@
 
             /* Hide complex timeline on mobile for simplicity */
         }
+
+        /* MOBILE RESPONSIVE STYLES */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            /* NAVIGATION - Hide menu items, show only logo and mobile button */
+            .nav-links {
+                display: none;
+            }
+
+            .nav-actions {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-actions .btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            /* Hide About Us button on mobile to save space */
+            .btn-purple {
+                display: none;
+            }
+
+            /* HERO SECTION */
+            .hero-content h1 {
+                font-size: 1.8rem !important;
+                line-height: 1.2;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem !important;
+            }
+
+            /* SECTION TITLES */
+            .section-title {
+                font-size: 2rem !important;
+            }
+
+            .gradient-text {
+                font-size: 2rem !important;
+            }
+
+            /* EVENTS GRID */
+            .events-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            /* ABOUT SECTION */
+            .foundation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-bottom-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* VISION SECTION */
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-image {
+                order: -1;
+            }
+
+            /* ELDERS SECTION */
+            .elders-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* SUNDAY DETAILS */
+            .sunday-top-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sunday-steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* MINISTRIES */
+            .ministries-timeline {
+                padding-left: 0;
+            }
+
+            .ministry-track {
+                padding-left: 0;
+            }
+
+            /* STUDENT MINISTRY */
+            .student-grid-top,
+            .student-grid-bottom {
+                grid-template-columns: 1fr;
+            }
+
+            /* CELEBRATIONS */
+            .special-meetings-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </body>
 
