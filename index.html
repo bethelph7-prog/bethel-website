@@ -1229,11 +1229,62 @@
             font-size: 0.9rem;
         }
 
+        /* INTRO GRID LAYOUT (For Student Ministry & Events) */
+        .intro-grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+            text-align: left;
+        }
+
+        .intro-text h1.section-title {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text .ministries-intro {
+            text-align: left;
+            max-width: 100%;
+            margin-bottom: 0;
+            font-size: 1.2rem;
+        }
+
+        .intro-image {
+            width: 100%;
+            height: 350px;
+            /* Explicit height to prevent it being too tall */
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures image covers the area without distortion */
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .intro-image:hover img {
+            transform: scale(1.05);
+        }
+
+
         @media (max-width: 900px) {
 
             .location-top-grid,
-            .directions-grid {
+            .directions-grid,
+            .intro-grid-container {
                 grid-template-columns: 1fr;
+            }
+
+            .intro-image {
+                height: 250px;
             }
 
             .event-left,
@@ -1248,6 +1299,58 @@
             }
 
             /* Hide complex timeline on mobile for simplicity */
+        }
+
+        /* CONTACT FORM STYLES */
+        .contact-section {
+            padding: 4rem 0;
+            background: #050505;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .contact-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #111;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group textarea {
+            resize: vertical;
         }
 
         /* HAMBURGER MENU BUTTON */
@@ -1470,6 +1573,7 @@
                 <li><a href="#events">Events</a></li>
                 <li><a href="#ministries">Ministries</a></li>
                 <li><a href="#student-ministry">Student Ministry</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="https://apps.apple.com/ph/app/bethel-hebron-connect/id6504802130" target="_blank"
@@ -1584,8 +1688,7 @@
 
                 <div class="foundation-grid">
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=1000&auto=format&fit=crop"
-                            alt="Open Bible">
+                        <img src="public/modern_bible_church.png" alt="Open Bible in Modern Church">
                     </div>
                     <div class="about-text">
                         <h2 class="sub-title">Our Foundation</h2>
@@ -1819,17 +1922,25 @@
         <!-- NINTH SCREEN: STUDENT MINISTRY -->
         <section id="student-ministry" class="student-ministry-section">
             <div class="container">
-                <div class="center">
-                    <h1 class="gradient-text section-title">Indian International Student Ministry</h1>
-                    <h2 class="visually-hidden">Section</h2>
-                </div>
-                <div class="center">
-                    <p class="ministries-intro">Bethel Prayer House warmly welcomes Indian international students from
-                        across the Greater Chicago area, including those at <strong>UIC, IIT, Lewis University, DePaul,
-                            NIU (Northern Illinois University), and North Central College</strong>. We understand the
-                        longing for home – the familiar sights, sounds, and especially the taste of home-cooked Indian
-                        meals. We offer a spiritual haven and a family away from home, ensuring you can maintain your
-                        cultural and spiritual roots while thriving in America.</p>
+                <div class="intro-grid-container">
+                    <div class="intro-text">
+                        <h1 class="gradient-text section-title">Indian International Student Ministry</h1>
+                        <h2 class="visually-hidden">Section</h2>
+                        <p class="ministries-intro">Bethel Prayer House warmly welcomes Indian international students
+                            from
+                            across the Greater Chicago area, including those at <strong>UIC, IIT, Lewis University,
+                                DePaul,
+                                NIU (Northern Illinois University), and North Central College</strong>. We understand
+                            the
+                            longing for home – the familiar sights, sounds, and especially the taste of home-cooked
+                            Indian
+                            meals. We offer a spiritual haven and a family away from home, ensuring you can maintain
+                            your
+                            cultural and spiritual roots while thriving in America.</p>
+                    </div>
+                    <div class="intro-image">
+                        <img src="public/student_ministry_cartoon.png" alt="Indian International Students Fellowship">
+                    </div>
                 </div>
 
                 <div class="student-grid-top">
@@ -1951,11 +2062,21 @@
         <!-- TENTH SCREEN: EVENTS AND CELEBRATIONS -->
         <section id="events-celebrations" class="celebrations-section">
             <div class="container">
-                <h1 class="gradient-text section-title">Events and Celebrations</h1>
-                <h2 class="visually-hidden">Section</h2>
-                <p class="ministries-intro">Throughout the year, we celebrate God's goodness through special events that
-                    bring our church family together and honor our Indian Christian heritage while embracing American
-                    traditions.</p>
+                <div class="intro-grid-container">
+                    <!-- Image Left -->
+                    <div class="intro-image">
+                        <img src="public/events-bg.png" alt="Celebration">
+                    </div>
+                    <div class="intro-text">
+                        <h1 class="gradient-text section-title">Events and Celebrations</h1>
+                        <h2 class="visually-hidden">Section</h2>
+                        <p class="ministries-intro">Throughout the year, we celebrate God's goodness through special
+                            events that
+                            bring our church family together and honor our Indian Christian heritage while embracing
+                            American
+                            traditions.</p>
+                    </div>
+                </div>
 
                 <div class="events-timeline">
                     <div class="events-timeline-line"></div>
@@ -2124,6 +2245,52 @@
             </div>
         </section>
     </main>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h1 class="gradient-text section-title" style="text-align: center;">Contact Us</h1>
+            <h2 class="visually-hidden">Section</h2>
+            <p class="section-intro"
+                style="text-align: center; color: #ccc; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Have any questions or prayer requests? Send us a message and we'll get back to you.</p>
+
+            <div class="contact-form-container">
+                <form action="https://formsubmit.co/bethelph7@gmail.com" method="POST" class="contact-form">
+                    <!-- Anti-spam honeypot -->
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Disable captcha for cleaner experience (optional) -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Success page redirect (optional, currently stays on page or shows default) -->
+                    <input type="hidden" name="_next" value="https://bethelprayerhouse.org/">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email Address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone (Optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-blue" style="width: 100%; font-size: 1.1rem;">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <footer class="site-footer">
         <div class="container footer-content">
